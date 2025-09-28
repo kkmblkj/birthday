@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday MAMA</title>
+
+  <!-- 💕 Pretty Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fff0f5;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+
+    .card {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 100px auto;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
+      text-align: center;
+    }
+
+    .card h1 {
+      font-size: 2.5rem;
+      color: #d81b60;
+      margin-bottom: 20px;
+    }
+
+    .card p {
+      font-size: 1.2rem;
+      color: #4a235a;
+      line-height: 1.7;
+    }
+
+    em {
+      font-style: italic;
+      color: #e91e63;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🎉 Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+
+  <!-- 💌 Birthday Card Message -->
+  <div class="card">
+    <h1>Happy Birthday MAMA ❤️</h1>
+    <p>
+In this world, There is strength and then there is you.
+<br>
+You have the kind of strength that does not always get noticed but I always do.
+<br>
+ Showing up everyday when you are tired. constantly putting other's first even when your own heart is heavy and loving without any limits at all no matter what life throws your way because that is the amazing woman you are.
+<br> <br>
+
+You are a powerful and resilient woman who has been through so much, sacrificed so much for yourself and your loved one's and yet you still manage to show up every single day with a heart full of love. That is noy just mere strength, it is your power and you own it with so much grace. I will never be able to fully explain how grateful I am that God gave me you, not just as a mother but as a best friend, a guide and a protector. Through all of that you still manage to pour into everyone around you, even when your own cup is not full. Thank you for being soft even when life tried to make you hard. Thank you for being patient with me, even when I was not making it esay for you and thank you for loving me so deeply, proudly and loudly.
+<br> <br>
+
+You are so loved.
+<br>
+You are so appreciated.
+<br>
+You are so needed.
+<br>
+You are so valued.
+<br>
+And Today, More than anything, I hope you feel the love and gratitude❤️
+<br> <br>
+
+Happy Birthday My Best Friend.
+<br>
+I hope today spoils you, as much as you have spent your life spoiling everyone else. 
+<br>
+You deserve love, rest, peace, good food and people doings things for you as much as you wish.
+<br>
+I love you than I can say or express and definitely more than you know. 
+      <br><br>
+      With all my love ❤️,<br>
+      <em>- Vo</em>
+    </p>
+  </div>
+
+  <!-- 🎉 Confetti Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    confetti({
+      particleCount: 180,
+      spread: 120,
+      origin: { y: 0.6 }
+    });
+  </script>
+
+</body>
+</html>

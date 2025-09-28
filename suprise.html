@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎉 Surprise!</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffe0f0;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+      z-index: 0;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+      color: #c2185b;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    p {
+      font-size: 1.3rem;
+      color: #e2dfe1;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .btn {
+      font-size: 1.2rem;
+      padding: 12px 24px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      position: relative;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #e91e63;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    /* Video styles - full screen behind content */
+    #bg-video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      object-fit: cover;
+      filter: brightness(0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video autoplay loop muted playsinline id="bg-video">
+    <source src="hhh.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- 🎊 Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <h1>🎉 Surprise! 🎉</h1>
+  <p>You unlocked your birthday message!<br>Click below to read it.</p>
+  
+  <a href="birthday.html" class="btn">Read Your Message 💌</a>
+
+  <!-- Unmute video on click -->
+  <script>
+    document.body.addEventListener('click', () => {
+      const video = document.getElementById('bg-video');
+      if (video.muted) {
+        video.muted = false;
+        video.play();
+      }
+    });
+  </script>
+
+  <!-- 🎉 Confetti Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    const duration = 3 * 1000;
+    const animationEnd = Date.now() + duration;
+    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+    function randomInRange(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    const interval = setInterval(function () {
+      const timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+
+      const particleCount = 50 * (timeLeft / duration);
+
+      confetti(Object.assign({}, defaults, {
+        particleCount,
+        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }
+      }));
+      confetti(Object.assign({}, defaults, {
+        particleCount,
+        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }
+      }));
+    }, 250);
+  </script>
+
+</body>
+</html>

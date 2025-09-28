@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unlock the Love</title>
+
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Playfair Display', serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #ffd9e6;
+
+.bg-collage {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1; /* behind your content */
+      display: flex;
+    }
+
+    .bg-collage img {
+      flex: 1;                /* each image shares space equally */
+      object-fit: cover;
+      width: auto;
+      height: 100%;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    
+
+    .container {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.3);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(255, 105, 180, 0.4);
+    }
+
+    select {
+      font-size: 1.5rem;
+      padding: 10px;
+      margin: 0 5px;
+      border-radius: 8px;
+      border: 2px solid #ff69b4;
+      background-color: #fff;
+      color: #ff69b4;
+      text-align: center;
+    }
+
+    button {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      padding: 10px 30px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff3399;
+    }
+
+    #lock-error {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+
+
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+
+</head>
+
+<body style="
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+">
+
+
+  <h1 style="
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+    color: #dd3e8e;
+    margin: 0;
+    user-select: none;
+  ">Happy 44th!❤️</h1>
+
+  <h6 style="
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin: 5px 0 30px 0;
+    user-select: none;
+  ">enter your birthyear to unlock the love</h6>
+
+
+
+  <div class="bg-collage">
+    <img src="movo.png" alt="">
+    <img src="one.png" alt="">
+    <img src="pink.png" alt="">
+  </div>
+
+
+
+
+  <div style="
+    text-align: center; 
+    background-color: rgba(255, 255, 255, 0.151);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(255, 105, 180, 0.6);
+  ">
+  
+    <img src="one.png" alt="Heart Lock" style="width: 200px; margin-bottom: 20px;" />
+
+    <div>
+      <select id="digit1" style="
+        font-size: 1.5rem;
+        padding: 10px;
+        margin: 0 5px;
+        border-radius: 8px;
+        border: 2px solid #ff69b4;
+        background-color: #fff;
+        color: #ff69b4;
+        appearance: none;
+        text-align: center;
+      ">
+        <option>0</option><option>1</option><option>2</option><option>3</option><option>4</option>
+        <option>5</option><option>6</option><option>7</option><option>8</option><option>9</option>
+      </select>
+
+      <select id="digit2" style="
+        font-size: 1.5rem;
+        padding: 10px;
+        margin: 0 5px;
+        border-radius: 8px;
+        border: 2px solid #ff69b4;
+        background-color: #fff;
+        color: #ff69b4;
+        appearance: none;
+        text-align: center;
+      ">
+        <option>0</option><option>1</option><option>2</option><option>3</option><option>4</option>
+        <option>5</option><option>6</option><option>7</option><option>8</option><option>9</option>
+      </select>
+
+      <select id="digit3" style="
+        font-size: 1.5rem;
+        padding: 10px;
+        margin: 0 5px;
+        border-radius: 8px;
+        border: 2px solid #ff69b4;
+        background-color: #fff;
+        color: #ff69b4;
+        appearance: none;
+        text-align: center;
+      ">
+        <option>0</option><option>1</option><option>2</option><option>3</option><option>4</option>
+        <option>5</option><option>6</option><option>7</option><option>8</option><option>9</option>
+      </select>
+
+      <select id="digit4" style="
+        font-size: 1.5rem;
+        padding: 10px;
+        margin: 0 5px;
+        border-radius: 8px;
+        border: 2px solid #ff69b4;
+        background-color: #fff;
+        color: #ff69b4;
+        appearance: none;
+        text-align: center;
+      ">
+        <option>0</option><option>1</option><option>2</option><option>3</option><option>4</option>
+        <option>5</option><option>6</option><option>7</option><option>8</option><option>9</option>
+      </select>
+    </div>
+
+    <button onclick="checkCombo()" style="
+      margin-top: 20px;
+      font-size: 1.2rem;
+      padding: 10px 30px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    " 
+    onmouseover="this.style.backgroundColor='#ff3399';" 
+    onmouseout="this.style.backgroundColor='#ff69b4';"
+    >Unlock</button>
+
+    <p id="lock-error" style="color: #ff0000; margin-top: 15px;"></p>
+  </div>
+
+  <script>
+    // Example password = 1981
+    function checkCombo() {
+      const pass = '1981';
+      const d1 = document.getElementById('digit1').value;
+      const d2 = document.getElementById('digit2').value;
+      const d3 = document.getElementById('digit3').value;
+      const d4 = document.getElementById('digit4').value;
+
+      const inputPass = d1 + d2 + d3 + d4;
+      const errorEl = document.getElementById('lock-error');
+
+      if (inputPass === pass) {
+        errorEl.style.color = 'green';
+        errorEl.textContent = 'Unlocked! Redirecting...';
+        setTimeout(() => {
+          window.location.href = 'suprise.html'; // Redirect to birthday card page
+        }, 1500);
+      } else {
+        errorEl.style.color = 'red';
+        errorEl.textContent = 'Try Again';
+      }
+    }
+  </script>
+
+</body>
+</html>
